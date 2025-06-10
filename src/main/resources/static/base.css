@@ -65,9 +65,3 @@ a:hover {
     transform: scale(1.05);
 }
 
-li {
-    list-style-type: none;
-    padding-left: 0;
-    text-decoration: none;
-
-}
