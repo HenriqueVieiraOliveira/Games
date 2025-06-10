@@ -1,0 +1,12 @@
+body {
+    background-color: #ffebee;
+}
+
+input[type="submit"] {
+    background-color: #e53935;
+    color: white;
+    border: none;
+}
+input[type="submit"]:hover {
+    background-color: #c62828;
+}

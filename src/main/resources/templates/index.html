@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>SISTEMA DE JOGOS</h1>
+    <ul>
+        <li>
+            <a th:href="@{/formulario}">
+                CADASTRAR
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/listar}">
+                LISTAR
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/buscar}">
+                BUSCAR POR NOME
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/atualizar}">
+                ATUALIZAR
+            </a>
+        </li>
+        <li>
+            <a href="@{/deletar}">
+                DELETAR
+            </a>
+        </li>
+    </ul>
+</body>
+</html>

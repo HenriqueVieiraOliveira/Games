@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Atualizar Game</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <h1>ATUALIZAR GAME</h1>
+
+    <form th:action="@{/atualizar}" method="post" th:object="${game}">
+        Nome (do game a atualizar): <input type="text" th:field="*{nome}" required><br>
+        Novo Ano de Lançamento: <input type="number" th:field="*{anoLancamento}" required><br>
+        Novo Preço: <input type="number" step="0.01" th:field="*{preco}" required><br>
+        <input type="submit" value="Atualizar">
+    </form>
+
+    <br>
+    <a th:href="@{/}" class="botao-link">Voltar</a>
+</body>
+</html>

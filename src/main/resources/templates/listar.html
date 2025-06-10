@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Games</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <h1>GAMES CADASTRADOS</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Ano de Lançamento</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="game : ${games}">
+                <td th:text="${game.nome}">Nome</td>
+                <td th:text="${game.anoLancamento}">Ano</td>
+                <td th:text="'R$ ' + ${game.preco}">Preço</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <a th:href="@{/formulario}">Cadastrar novo game</a>
+    <a th:href="@{/}">Página Inicial</a>
+</body>
+</html>

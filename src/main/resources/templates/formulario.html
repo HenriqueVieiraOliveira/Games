@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>CADASTRO</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <h1>CADASTRO DE JOGOS</h1>
+
+    <form th:action="@{/cadastro}" method="POST" th:object="${game}">
+        <div>
+            <label>Nome: </label>
+            <input type="text" th:field="*{nome}" />
+        </div>
+        <div>
+            <label>Ano de Lançamento: </label>
+            <input type="number" th:field="*{anoLancamento}" />
+        </div>
+        <div>
+            <label>Preço: R$</label>
+            <input type="number" th:field="*{preco}" />
+        </div>
+        <br>
+        <input type="submit" value="Cadastrar" />
+    </form>
+</body>
+</html>

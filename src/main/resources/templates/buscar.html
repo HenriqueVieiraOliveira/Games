@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Buscar Game</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <h1>BUSCAR GAME POR NOME</h1>
+
+    <form th:action="@{/buscar}" method="post" th:object="${game}">
+        Nome: <input type="text" th:field="*{nome}" required><br>
+        <input type="submit" value="Buscar">
+    </form>
+
+    <div th:if="${resultado != null}">
+        <h2>Resultado:</h2>
+        <p>Nome: <span th:text="${resultado.nome}"></span></p>
+        <p>Ano de Lançamento: <span th:text="${resultado.anoLancamento}"></span></p>
+        <p>Preço: R$ <span th:text="${resultado.preco}"></span></p>
+    </div>
+
+    <br>
+    <a th:href="@{/}" class="botao-link">Voltar</a>
+</body>
+</html>
