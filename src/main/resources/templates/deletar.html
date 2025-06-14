@@ -7,7 +7,7 @@
 <body>
     <h1>DELETAR GAME</h1>
 
-    <form th:action="@{/deletar}" method="post" th:object="${game}">
+    <form th:action="@{/deletar}" method="POST" th:object="${game}">
         Nome do game: <input type="text" th:field="*{nome}" required><br>
         <input type="submit" value="Deletar">
     </form>
